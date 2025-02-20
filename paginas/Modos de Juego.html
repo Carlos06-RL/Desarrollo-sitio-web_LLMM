@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modos de Juego en Overwatch</title>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    font-family: sans-serif;
+    width: 100%;
+    height: 57px;
+    position: relative;
+    top: 0; 
+    z-index: 2;
+    background-color: grey;
+}
+
+ul, li {
+    list-style: none;
+}
+
+nav>ul>li {
+    width: 15%;
+    float: left;
+}
+
+li>a, ul>a {
+    list-style: none;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+li>a:hover, ul>a:hover {
+    background-color: white;
+    color: black;
+}
+
+ul#menu>li>ul { 
+    display: none;
+}
+
+ul#menu>li:hover>ul {
+    display: block;
+    background-color: red;
+    color: black;
+}
+
+nav#menu1 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+section {
+    padding: 20px;
+    margin-top: 100px;
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.media iframe {
+    max-width: 100%;
+    height: 315px;
+}
+
+#logo {
+    width: 100px;
+    position: absolute;
+    top: 15px;
+    right: 65px;
+    z-index: 999;
+        }
+
+#logo-link:hover #logo {
+    transform: scale(1.1);
+}
+
+.media > * {
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .media {
+        flex-direction: column;
+        align-items: center;
+}
+
+.media > * {
+    margin-right: 0;
+    margin-bottom: 20px;
+    }
+}
+
+.media img:hover {
+    box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.7);
+    transition: box-shadow 0.3s ease;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a id="logo-link" href="../index.html"> <img id="logo" src="../recursos/imagenes/Overwatch_logo.png" alt="Logo de Overwatch"> </a>
+    <nav>
+        <ul id="menu">
+            <li><a href="../paginas/Modos de Juego.html">MODOS DE JUEGO</a>
+                <ul>
+                    <li>Juego rápido</li>
+                    <li>Juego Competitivo</li>
+                </ul>
+            </li>
+            <li><a href="../paginas/Modo Historia.html">MODO HISTORIA</a>
+                <ul>
+                    <li>Explicación</li>
+                    <li>Lore del Juego</li>
+                </ul>
+            </li>
+            <li>
+                <a href="../paginas/Formulario sobre Overwacht.html">FORMULARIO SOBRE OVERWATCH</a>
+            </li>
+        </ul>
+    </nav> 
+    <h1>Modos de Juego en Overwatch</h1>
+</header>
+
+<nav id="menu1">
+    <a href="#partidas-rapidas">Partidas Rápidas</a> |
+    <a href="#partidas-competitivas">Partidas Competitivas</a>
+</nav>
+
+<section id="partidas-rapidas">
+    <h2>Partidas Rápidas</h2>
+    <p>En las partidas rápidas de Overwatch, los jugadores pueden unirse a un juego rápidamente y jugar en un entorno más relajado sin las restricciones y presiones de las partidas competitivas. Estas partidas tienen una duración normal y permiten a los jugadores practicar diferentes héroes y estrategias.</p>
+    <div class="media">
+        <img src="../recursos/imagenes/Partidas Rapidas.jpg" alt="Imagen Partida Rápida" width="500" height="600">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_lO0zJNH8CI?si=gHmjpmtA16G9NZS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section id="partidas-competitivas">
+    <h2>Partidas Competitivas</h2>
+    <p>Las partidas competitivas de Overwatch son para jugadores que desean enfrentarse en un entorno más serio y competitivo. Estas partidas tienen un sistema de emparejamiento más estricto y cuentan con un sistema de clasificación que determina el nivel de habilidad de cada jugador.</p>
+    <div class="media">
+        <img src="../recursos/imagenes/Partidas Competitivas.jpg" alt="Imagen Partida Competitiva" width="500" height="600">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OHDC1K7oDvE?si=0C2FIfQbsgSidiil" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+<br><br><br>
+<footer>
+    <p>© 2024 Overwatch 2 Heroes - Todos los derechos reservados | Desarrollado por Carlos Repullo Luque</p>
+</footer>
+</body>
+</html>

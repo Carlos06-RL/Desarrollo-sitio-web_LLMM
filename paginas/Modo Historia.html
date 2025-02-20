@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Historia y Lore de Overwatch</title>
+    <style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; 
+    color: #fff;
+    text-align: center;
+}
+
+#logo {
+    width: 100px;
+    position: fixed;
+    top: 15px;
+    right: 65px;
+    z-index: 999;
+}
+
+#logo-link:hover #logo {
+    transform: scale(1.1);
+}
+
+table {
+    width: 90%; 
+    margin: 20px auto; 
+    border-collapse: collapse;
+    border: 3px solid white; 
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #fff; 
+    color: #fff;
+}
+
+th {
+    background-color: #343a40;
+    text-align: center; 
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th[colspan="1"] {
+    background-color: #343a40; 
+}
+
+.media {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; 
+}
+
+.media iframe {
+    max-width: 100%;
+}
+
+nav {
+    font-family: sans-serif;
+    width: 100%;
+    height: 57px;
+    position: relative;
+    top: 0; 
+    z-index: 2;
+    background-color: grey;
+}
+
+ul, li {
+    list-style: none;
+}
+
+nav > ul > li {
+    width: 15%;
+    float: left;
+}
+
+li > a, ul > a {
+    list-style: none;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+li > a:hover, ul > a:hover {
+    background-color: white;
+    color: black;
+}
+
+ul#menu > li > ul { 
+    display: none;
+}
+
+ul#menu > li:hover > ul {
+    display: block;
+    background-color: red;
+    color: black;
+}
+
+td:nth-child(1), td:nth-child(2) {
+    text-align: center;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.heroes {
+    margin-top: 20px;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.heroes li {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.heroes li:hover {
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.heroes li a {
+    color: inherit;
+    text-decoration: none;
+    background-color: #343a40;
+}
+    </style>
+</head>
+<header>
+    <a id="logo-link" href="../index.html"> <img id="logo" src="../recursos/imagenes/Overwatch_logo.png"></a>
+    <nav>
+        <ul id="menu">
+            <li><a href="../paginas/Modos de Juego.html">MODOS DE JUEGO</a>
+                <ul>
+                    <li>Juego rápido</li>
+                    <li>Juego Competitivo</li>
+                </ul>
+            </li>
+            <li><a href="../paginas/Modo Historia.html">MODO HISTORIA</a>
+                <ul>
+                    <li>Explicación</li>
+                    <li>Lore del Juego</li>
+                </ul>
+            </li>
+            <li>
+                <a href="../paginas/Formulario sobre Overwacht.html">FORMULARIO SOBRE OVERWATCH</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <section id="historia">
+        <h2 style="text-align: center;">Modo Historia y Lore de Overwatch</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Explicación del Modo Historia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <p>El modo historia de Overwatch se desarrolla en un mundo futurista donde los héroes luchan por la paz y la justicia. Incluye eventos como la Primera Crisis Ómnica y la Operación: Caída del King's Row.</p>
+                        <div class="media">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/efAoOsBsifs?si=9V1wnDuhMsHDZS8r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Lore del Juego</th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>El lore del juego explora la historia detrás de los héroes y las organizaciones que componen el universo de Overwatch, incluyendo detalles sobre la caída de Overwatch y los conflictos entre humanos y ómnicos.</p>
+                        <p>Overwatch fue fundada bajo la ordenanza de las Naciones Unidas con el objetivo de detener la crisis global en la que se había convertido la guerra contra los ómnicos, una guerra diferente a cualquiera a la que la humanidad se hubiese enfrentado hasta ese momento. Ningún país o nación estaba teniendo éxito intentando detener las hordas de robots en sus fronteras, pero algunos soldados excepcionales lograron destacar con extraños y novedosos métodos de luchar. Las Naciones Unidas reunieron a estos soldados a lo largo y ancho de todo el mundo, y formaron un grupo de asalto de élite bautizado como Overwatch.</p>
+                        <div class="media">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/D9q0jdga73E?si=UQPCgQ1M841X7kuZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Personajes Destacados</th>
+                    <th>Eventos Importantes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="https://overwatch.fandom.com/wiki/Tracer">Tracer</a></li>
+                            <li><a href="https://overwatch.fandom.com/wiki/Reinhardt">Reinhardt</a></li>
+                            <li><a href="https://overwatch.fandom.com/wiki/Widowmaker">Widowmaker</a></li>
+                            <li><a href="https://overwatch.fandom.com/wiki/Genji">Genji</a></li>
+                            <li><a href="https://overwatch.fandom.com/es/wiki/Cassidy">Cassidy</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="https://overwatch.fandom.com/es/wiki/Crisis_%C3%93mnica">Primera Crisis Ómnica</a></li>
+                            <li><a href="https://overwatch.fandom.com/es/wiki/King%27s_Row">Operación: Caída del King's Row</a></li>
+                            <li><a href="https://overwatch.fandom.com/es/wiki/Overwatch_(organizaci%C3%B3n)">Insurrección de los Ómnicos</a></li>
+                            <li><a href="https://overwatch.fandom.com/es/wiki/Overwatch_(organizaci%C3%B3n)">Destrucción del Cuartel General de Overwatch</a></li>
+                            <li><a href="https://overwatch.fandom.com/es/wiki/Overwatch_(organizaci%C3%B3n)">Asalto a Volskaya Industries</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h1>Mis Heroes Favoritos</h1>
+    <h2>Tanques</h2>
+    <ul class="heroes">
+        <li><a href="https://overwatch.fandom.com/wiki/Doomfist">Doomfist</a></li>
+        <li><a href="https://overwatch.fandom.com/es/wiki/D.Va">DVA</a></li>
+        <li><a href="https://overwatch.fandom.com/wiki/Mauga">Mauga</a></li>
+        <li><a href="https://overwatch.fandom.com/wiki/Orisa">Orisa</a></li>
+    </ul>
+
+    <h2>Daño</h2>
+    <ul class="heroes">
+        <li><a href="https://overwatch.fandom.com/es/wiki/Soldado:_76">Soldado 76</a></li>
+        <li><a href="https://overwatch.fandom.com/es/wiki/Reaper">Reaper</a></li>
+        <li><a href="https://overwatch.fandom.com/es/wiki/Hanzo">Hanzo</a></li>
+        <li><a href="https://overwatch.fandom.com/es/wiki/Genji">Genji</a></li>
+    </ul>
+
+    <h2>Apoyo</h2>
+    <ul class="heroes">
+        <li><a href="https://overwatch.fandom.com/es/wiki/Zenyatta">Zenyatta</a></li>
+        <li><a href="https://overwatch.fandom.com/es/wiki/Moira">Moira</a></li>
+        <li><a href="https://overwatch.fandom.com/es/wiki/Mercy">Mercy</a></li>
+        <li><a href="https://overwatch.fandom.com/wiki/Kiriko">Kiriko</a></li>
+    </ul>
+
+</body>
+<br><br><br><br><br>
+<footer>
+    <p>© 2024 Overwatch 2 Heroes - Todos los derechos reservados | Desarrollado por Carlos Repullo Luque</p>
+</footer>
+</html>
