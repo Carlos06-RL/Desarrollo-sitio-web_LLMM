@@ -1,1 +1,1 @@
-http://www.git
+https://github.com/Carlos06-RL/Desarrollo-sitio-web.git
