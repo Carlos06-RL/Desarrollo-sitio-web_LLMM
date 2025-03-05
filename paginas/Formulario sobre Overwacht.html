@@ -5,179 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Overwatch</title>
     <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-}
-
-#logo {
-    width: 100px;
-    position: fixed;
-    top: 15px;
-    right: 65px;
-    z-index: 999;
-}
-
-#logo-link:hover #logo {
-    transform: scale(1.1);
-}
-
-form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 40px;
-    background-color: #343a40;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="range"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 4px;
-}
-
-input[type="submit"],
-input[type="button"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-input[type="submit"]:hover,
-input[type="button"]:hover {
-    background-color: #0056b3;
-}
-
-.radio-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.radio-container label {
-    margin-right: 10px;
-}
-
-.radio-container input[type="radio"] {
-    margin-right: 5px;
-}
-
-#gusto-label {
-    display: flex;
-    justify-content: space-between;
-}
-
-nav {
-    font-family: sans-serif;
-    width: 100%;
-    height: 57px;
-    position: relative;
-    top: 0;
-    z-index: 2;
-    background-color: grey;
-}
-
-ul,
-li {
-    list-style: none;
-}
-
-nav>ul>li {
-    width: 15%;
-    float: left;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 100px;
+            background-color: #000;
+            color: #fff;
         }
 
-li>a,
-ul>a {
-    list-style: none;
-    font-weight: bold;
-    color: white;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-}
+        #logo {
+            width: 100px;
+            position: fixed;
+            top: 15px;
+            right: 65px;
+            z-index: 999;
+            transition: transform 0.3s;
+        }
 
-li>a:hover,
-ul>a:hover {
-    background-color: white;
-    color: black;
-}
+        #logo-link:hover #logo {
+            transform: scale(1.1);
+        }
 
-ul#menu>li>ul {
-    display: none;
-}
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #343a40;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-ul#menu>li:hover>ul {
-    display: block;
-    background-color: red;
-    color: black;
-}
+        h2 {
+            text-align: center;
+        }
 
-footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
 
-footer p {
-    margin: 0;
-}
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+        }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
+        input[type="submit"], input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
 
-footer a:hover {
-    text-decoration: underline;
-}
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background-color: #0056b3;
+        }
 
-</style>
+        .radio-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav {
+            width: 100%;
+            background-color: grey;
+            position: relative;
+            top: 0;
+            z-index: 2;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        li {
+            position: relative;
+        }
+
+        li > a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        li:hover > a {
+            background-color: white;
+            color: black;
+        }
+
+        li ul {
+            display: none;
+            position: absolute;
+            background-color: red;
+            min-width: 150px;
+            top: 100%;
+            left: 0;
+            padding: 0;
+        }
+
+        li:hover > ul {
+            display: block;
+        }
+
+        li ul li {
+            width: 100%;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <a id="logo-link" href="../index.html"> <img id="logo" src="../recursos/imagenes/Overwatch_logo.png"> </a>
+    <a id="logo-link" href="../index.html"> 
+        <img id="logo" src="../recursos/imagenes/Overwatch_logo.png" alt="Overwatch Logo"> 
+    </a>
     <nav>
-        <ul id="menu">
-            <li><a href="../paginas/Modos de Juego.html">MODOS DE JUEGO</a>
+        <ul>
+            <li>
+                <a href="../paginas/Modos de Juego.html">MODOS DE JUEGO</a>
                 <ul>
-                    <li>Juego rápido</li>
-                    <li>Juego Competitivo</li>
+                    <li><a href="#">Juego rápido</a></li>
+                    <li><a href="#">Juego Competitivo</a></li>
                 </ul>
             </li>
-            <li><a href="../paginas/Modo Historia.html">MODO HISTORIA</a>
+            <li>
+                <a href="../paginas/Modo Historia.html">MODO HISTORIA</a>
                 <ul>
-                    <li>Explicación</li>
-                    <li>Lore del Juego</li>
+                    <li><a href="#">Explicación</a></li>
+                    <li><a href="#">Lore del Juego</a></li>
                 </ul>
             </li>
             <li>
@@ -190,9 +164,23 @@ footer a:hover {
 <form id="miFormulario">
     <h2>Elige el héroe que más te guste y el nivel que tienes con este</h2>
 
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
+    <!-- Campos adicionales -->
+    <label for="nombre_completo">Nombre completo:</label>
+    <input type="text" id="nombre_completo" name="nombre_completo" required>
 
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <!-- Los demás campos existentes -->
     <label for="rol">Rol:</label>
     <select id="rol" name="rol">
         <option value="tanque">Tanque</option>
@@ -211,7 +199,7 @@ footer a:hover {
     </select>
 
     <div class="radio-container">
-        <label for="tipo-cuenta">Tipo de cuenta:</label>
+        <label>Tipo de cuenta:</label>
         <input type="radio" id="gratuita" name="tipo-cuenta" value="gratuita" checked>
         <label for="gratuita">Gratuita</label>
         <input type="radio" id="pago" name="tipo-cuenta" value="pago">
@@ -221,7 +209,7 @@ footer a:hover {
     <label for="pais">País de residencia:</label>
     <input type="text" id="pais" name="pais" required>
 
-    <label id="gusto-label" for="gusto">¿Cuánto te gusta el juego? <span id="gusto-value">5</span></label>
+    <label for="gusto">¿Cuánto te gusta el juego? <span id="gusto-value">5</span></label>
     <input type="range" id="gusto" name="gusto" min="1" max="10" onchange="document.getElementById('gusto-value').textContent = this.value;">
 
     <label for="color">Elige un color:</label>
@@ -238,10 +226,13 @@ footer a:hover {
     <textarea id="escribe-algo" name="escribe-algo" rows="4"></textarea>
 
     <input type="submit" value="Enviar">
-    <input type="button" value="Cancelar" form="miFormulario">
+    <input type="button" value="Cancelar">
 </form>
-</body>
+
+
 <footer>
     <p>© 2024 Overwatch 2 Heroes - Todos los derechos reservados | Desarrollado por Carlos Repullo Luque</p>
 </footer>
+
+</body>
 </html>

@@ -9,6 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    padding-bottom: 60px;
     background-color: #000; 
     color: #fff;
     text-align: center;
@@ -75,35 +76,55 @@ nav {
 
 ul, li {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
 nav > ul > li {
-    width: 15%;
-    float: left;
+    position: relative;
 }
 
-li > a, ul > a {
-    list-style: none;
+nav a {
     font-weight: bold;
     color: white;
-    padding: 10px;
+    padding: 15px;
     display: block;
-    text-decoration: none;
+    text-decoration: none; /* Eliminar subrayado */
 }
 
-li > a:hover, ul > a:hover {
+nav a:hover {
     background-color: white;
     color: black;
 }
 
-ul#menu > li > ul { 
+ul#menu > li > ul {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: red;
+    width: 200px;
+    padding: 0;
+    border-radius: 5px;
 }
 
 ul#menu > li:hover > ul {
     display: block;
-    background-color: red;
-    color: black;
+}
+
+ul#menu > li > ul > li {
+    width: 100%;
+    text-align: left;
+}
+
+ul#menu > li > ul > li > a {
+    padding: 10px;
 }
 
 td:nth-child(1), td:nth-child(2) {
@@ -126,7 +147,7 @@ footer p {
 
 footer a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Eliminar subrayado */
 }
 
 footer a:hover {
@@ -161,8 +182,7 @@ footer a:hover {
 
 .heroes li a {
     color: inherit;
-    text-decoration: none;
-    background-color: #343a40;
+    text-decoration: none; /* Eliminar subrayado */
 }
     </style>
 </head>
@@ -172,23 +192,20 @@ footer a:hover {
         <ul id="menu">
             <li><a href="../paginas/Modos de Juego.html">MODOS DE JUEGO</a>
                 <ul>
-                    <li>Juego rápido</li>
-                    <li>Juego Competitivo</li>
+                    <li><a href="#">Juego rápido</a></li>
+                    <li><a href="#">Juego Competitivo</a></li>
                 </ul>
             </li>
             <li><a href="../paginas/Modo Historia.html">MODO HISTORIA</a>
                 <ul>
-                    <li>Explicación</li>
-                    <li>Lore del Juego</li>
+                    <li><a href="#">Explicación</a></li>
+                    <li><a href="#">Lore del Juego</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="../paginas/Formulario sobre Overwacht.html">FORMULARIO SOBRE OVERWATCH</a>
-            </li>
+            <li><a href="../paginas/Formulario sobre Overwacht.html">FORMULARIO SOBRE OVERWATCH</a></li>
         </ul>
     </nav>
 </header>
-
 <body>
     <section id="historia">
         <h2 style="text-align: center;">Modo Historia y Lore de Overwatch</h2>
@@ -270,11 +287,9 @@ footer a:hover {
         <li><a href="https://overwatch.fandom.com/es/wiki/Zenyatta">Zenyatta</a></li>
         <li><a href="https://overwatch.fandom.com/es/wiki/Moira">Moira</a></li>
         <li><a href="https://overwatch.fandom.com/es/wiki/Mercy">Mercy</a></li>
-        <li><a href="https://overwatch.fandom.com/wiki/Kiriko">Kiriko</a></li>
+        <li><a href="https://overwatch.fandom.com/es/wiki/Kiriko">Kiriko</a></li>
     </ul>
-
 </body>
-<br><br><br><br><br>
 <footer>
     <p>© 2024 Overwatch 2 Heroes - Todos los derechos reservados | Desarrollado por Carlos Repullo Luque</p>
 </footer>
